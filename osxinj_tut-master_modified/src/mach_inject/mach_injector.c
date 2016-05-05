@@ -17,7 +17,7 @@ void MACH__Injector__init(MACH_INJECTOR_S_t mas)
 {
 	if(mas==0||mas->is_init==1)
 		return;
-	memset(mas,0,sizeof(MACH_INJECTOR_S_t));
+	memset(mas,0,sizeof(MACH_INJECTOR_S));
 	mas->is_init=1;
 }
 
@@ -25,7 +25,7 @@ void MACH__Injector__deinit(MACH_INJECTOR_S_t mas)
 {
 	if(mas==0||mas->is_init==0||mas->is_deinit==1)
 		return;
-	memset(mas,0,sizeof(MACH_INJECTOR_S_t));
+	memset(mas,0,sizeof(MACH_INJECTOR_S));
 	mas->is_init=1;
 	mas->is_deinit=1;
 }
@@ -34,7 +34,7 @@ void MACH__Injector__reset(MACH_INJECTOR_S_t mas)
 {
 	if(mas==0)
 		return;
-	memset(mas,0,sizeof(MACH_INJECTOR_S_t));
+	memset(mas,0,sizeof(MACH_INJECTOR_S));
 }
 
 int MACH__Injector__inject__pid(MACH_INJECTOR_S_t mas, pid_t pid, const char* lib)
